@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+/* navbar */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden;
+}
+.sidebar {
+  position: fixed;
+  left: 0px;
+  width: 250px;
+  height: 100%;
+  background: #e3abb6;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #E8A0BF;
+}
+#logo{
+  margin-top: 20px;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgba(254, 254, 254, 0.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: fixed;
+  background: #9A3B3B;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+}
+label #btn{
+  left: 250px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  opacity: 0;
+  pointer-events: none; /* fungsi blm jelas */
+  transition: all .5s;
+  display: flex;
+}
+label #cancel{
+  z-index: 1;  /* untuk memunculkan di sebelah kanan  */
+  left: 195px;
+  top: 17px;
+  font-size: 30px;
+  color: #ffffff;
+  padding: 4px 9px;
+  transition: all .5s ease; /* jk tdk ad ini cancel akan lebih dahulu muncul sebelum animasi selesai */
+  display: flex;
+}
+#check:checked ~ .sidebar{
+  left: -250px;
+}
+#check:checked ~ label #btn{
+  left: 40px;
+  opacity: 1; /* untuk lebih menerangi gambar agar terlihat lebih jelas lagi */
+  pointer-events: auto; /* jk tdk ad ini maka tdk bisa di lihatkan kembali ini hanya memunculkan pd wiliayah pilihan */
+}
+#check:checked ~ label #cancel{
+  left: -195px;
+}
+#check:checked ~ section{
+  margin-left: 0px;
+}
+
+/*****************************************
+            Halamaan Home
+******************************************/
+
+section{
+  background-color: #6b8fc4;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all .5s;
+  margin-left: -250px;
+  margin: 0; /* Pastikan tidak ada margin pada section */
+}
+.title {
+  font-size: 30px;
+  margin-top: -200px; /* Hilangkan margin di atas */
+  color: #000000;
+  padding-left: 320PX;
+  margin-bottom: 25px;
+}
+
+#randomid{
+  border-radius: 2vw;
+  margin-left: 650px;
+  margin-top: 150px;
+  width: 20%;
+}
+
+.title1{
+  width: 23%;
+  margin-left: 330px;
+  margin-bottom: 30px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.tooltip .tool {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(190, 134, 207);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tool::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -1px;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.tooltip:hover .tool {
+  visibility: visible;
+}
+
+.icon {
+  text-align: center;
+  font-size: 24px; /* Ubah ukuran ikon sesuai kebutuhan */
+  margin-top: 150px;
+}
+
+.icon i{
+  color: #ffffff;
+}
+
+/************************************
+              about me 
+*************************************/
+
+h2{
+  color: aliceblue;
+  padding-left: 600px;
+  padding-top: 50px;
+}
+
+/* yang pertama */
+#fobot{
+  margin-left: 470px;
+  margin-top: -230px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  height: 20vh;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.pindahcoba1{
+  margin-top: -130px;
+  margin-left: 320px;
+}
+
+/* yang ke dua */
+
+.tooltipp {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tooltipp .tooltiptextx {
+  visibility: hidden;
+  width: 180px;
+  height: 25vh;
+  background-color: rgba(0, 0, 0, 0.655);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 110%;
+}
+
+.tooltipp .tooltiptextx::after {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+.tooltipp:hover .tooltiptextx {
+  visibility: visible;
+}
+
+.pindahcoba2{
+  margin-top: -280px;
+  margin-left: 450px;
+}
+
+/* masuk ke tiga */
+
+.toooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+.toooltip .toooltiptext {
+  visibility: hidden;
+  width: 180px;
+  height: 20vh;
+  background-color: rgba(0, 0, 0, 0.644);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.toooltip .toooltiptext::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.toooltip:hover .toooltiptext {
+  visibility: visible;
+}
+.pindahcoba3{
+  margin-left: 800px;
+  margin-top: 20px;
+}
+
+/* masuk ke empat */
+
+.tooltipl {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+.tooltipl .tooltiptextl {
+  content: "";
+  visibility: hidden;
+  width: 180px;
+  height: 21vh;
+  background-color: rgba(0, 0, 0, 0.667);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltipl:hover .tooltiptextl {
+  visibility: visible;
+}
+
+.pindahcoba4{
+  margin-left: 800px;
+  margin-top: 150px;
+}
+
+
+/************************************** 
+              Portofolio                
+***************************************/
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.p{
+  color: #000000;
+  margin-left: -70px;
+  font-size: 34px;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 240px;
+  margin-left: -0px;
+  margin-right: -32vw;
+}
+
+.testimonial {
+  background-color: #b8d2e1;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  text-align: center;
+}
+
+.circle {
+  width: 285px;
+  height: 130px;
+  overflow: hidden; 
+  margin-left: 5px;
+  margin-bottom: 30px;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 50px;
+}
+
+.testimoniall{
+  background-color: #b8d2e1;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.testimoniaal{
+  background-color: #b8d2e1;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  text-align: center;
+  margin-top: 200px;
+}
+
+#pot{
+  border-radius: 20px;
+}
+
+.p1{
+  margin-top: -10px;
+}
+
+/***************************************** 
+                    FORM 
+******************************************/
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Mengisi tinggi viewport */
+}
+
+.git {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+h1.font{
+  text-align: center;
+  color: #333;
+}
+
+.muah {
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Menghindari masalah dengan padding dan lebar */
+}
+
+input:focus {
+  border-color: #ba8eb8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(186, 142, 184, 0.5);
+}
+
+button {
+  background-color: #ba8eb8;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #a678a8; /* Warna saat hover */
+}
+
+/************************************** 
+            Bagian Footer 
+****************************************/
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  margin-bottom: 15px;
+}
+
+.footer-content a,
+.footer-social a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a:hover,
+.footer-content a:hover {
+  text-decoration: underline;
+}
